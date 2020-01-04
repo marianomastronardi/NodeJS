@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+	h2(style="color:blue;")!= "Tus mascotas son:"
+	- var pets = ['cat', 'dog', 'dog2', 'dog3']
+	ul
+		each petName in pets
+			li(style="font-style:italic;")!= petName
+
+	ul
+		each usuario in usuarios
+			li(style="font-style:bold;")!= usuario
