@@ -1,0 +1,7 @@
+//comando para realizar un backup de una base de datos mongoDB desde atlas
+
+mongodump --host misdatos-shard-00-00-fs00f.mongodb.net --db mibase --port 27017 --username daniel --password "daniel123" --out E:\CursoNodeJS-Clase5\backupBaseMongoAtlas --authenticationDatabase admin --ssl
+
+
+//comando para restablecer el backup anterior en la base local
+mongorestore --host localhost --port 27017 "E:\CursoNodeJS-Clase5\backupBaseMongoAtlas\mibase" --db mibase
